@@ -94,7 +94,7 @@ section {
 .header-link-li {
 }
 .nav-header-link {
-  display: flex;
+  display: block;
   align-items: center;
   color: #2e2f42;
   font-weight: 500;
@@ -102,14 +102,10 @@ section {
   text-decoration: none;
   letter-spacing: 0.02em;
   padding: 24px 0;
-}
-.nav-header-link .active-link {
   position: relative;
-  color: #404bbf;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-header-link .active-link::after {
+.nav-header-link::after {
   content: '';
   position: absolute;
   left: 0;
@@ -118,10 +114,13 @@ section {
   height: 4px;
   background-color: #404bbf;
   border-radius: 2px;
+  opacity: 0;
 }
 
-.nav-header-link:hover,
-.nav-header-link:focus {
+.nav-header-link:hover::after,
+.nav-header-link:focus::after,
+.nav-header-link.current::after {
+  opacity: 1;
   color: rgba(64, 75, 191, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
