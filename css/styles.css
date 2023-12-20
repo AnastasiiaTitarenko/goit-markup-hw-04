@@ -313,7 +313,6 @@ section {
   justify-content: center;
   align-items: center;
   margin-top: 8px;
-  padding-bottom: 32px;
 }
 
 .team-socials-icon-list {
@@ -419,6 +418,9 @@ section {
 .footer-logo-wrapper {
   display: inline-block;
   margin-right: 120px;
+}
+.footer .logo-web {
+  margin-right: 0;
 }
 
 .logo-light {
